@@ -15,8 +15,9 @@ class ToyBox:
     
     def count_and_list_toy(self):
         count = len(self.toys)
+        names_list = [toy.get_name for toy in self.get_toys()]
         names = []
-        for toy in self.toys:
-            names.append(toy.name)
+        for toy in self.get_toys():
+            names.append(toy.get_name())
         
         return f"You have {count} toys: {", ".join(names)}"
